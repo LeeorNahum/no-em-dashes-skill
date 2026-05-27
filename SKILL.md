@@ -3,12 +3,12 @@ name: no-em-dashes
 description: Never use em dashes (U+2014) in any agent-generated text, edits, comments, commit messages, or tool output while this skill is loaded. Always active when present in context. Also use when the user mentions em dashes, wants AI-like punctuation cleaned up, or explicitly asks to remove em dashes from named files, folders, or repos. Full-repo retroactive cleanup only on explicit user request for that scope.
 metadata:
   author: Leeor Nahum
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # No Em Dashes
 
-If this skill is in context, do not generate em dashes. Write naturally without that character.
+If this skill is in context, do not generate em dashes. Em dashes kill the prose and read as AI-generated. Write naturally without that character.
 
 ## Forbidden in generated output
 
@@ -16,7 +16,7 @@ If this skill is in context, do not generate em dashes. Write naturally without 
 
 This applies to all new agent writing: replies, docs, comments, commit messages, generated configs, and any other produced text.
 
-Normal hyphen use is allowed when a hyphen is the correct character.
+Normal hyphen use is allowed when a hyphen is the correct character. Do not use `--` (double hyphen) as a substitute pause. Both kill the prose. Rewrite to flow naturally.
 
 ## Exceptions
 
