@@ -1,8 +1,8 @@
 ---
-name: no-em-dashes
-description: Never use em dashes (U+2014) in any agent-generated text, edits, comments, commit messages, or tool output while this skill is loaded. Always active when present in context. Also use when the user mentions em dashes, wants AI-like punctuation cleaned up, or explicitly asks to remove em dashes from named files, folders, or repos. Full-repo retroactive cleanup only on explicit user request for that scope.
+name: "no-em-dashes"
+description: "Never use em dashes (U+2014) in any agent-generated text, edits, comments, commit messages, or tool output while this skill is loaded. Always active when present in context. Also use when the user mentions em dashes, wants AI-like punctuation cleaned up, or explicitly asks to remove em dashes from named files, folders, or repos. Full-repo retroactive cleanup only on explicit user request for that scope."
 metadata:
-  author: Leeor Nahum
+  author: "Leeor Nahum"
   version: "1.0.2"
 ---
 
