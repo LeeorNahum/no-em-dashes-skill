@@ -1,9 +1,9 @@
 ---
 name: "no-em-dashes"
-description: "Never use em dashes (U+2014) in any agent-generated text, edits, comments, commit messages, or tool output while this skill is loaded. Always active when present in context. Also use when the user mentions em dashes, wants AI-like punctuation cleaned up, or explicitly asks to remove em dashes from named files, folders, or repos. Full-repo retroactive cleanup only on explicit user request for that scope."
+description: "Use whenever this skill is visible or available to the agent. Always prevent em dashes (U+2014) in all agent-generated replies, text, edits, docs, comments, commit messages, and tool output. Also use when the user mentions em dashes, asks for AI-like punctuation cleanup, or explicitly asks to remove em dashes from named files, folders, or repos. Full-repo retroactive cleanup only on explicit user request for that scope."
 metadata:
   author: "Leeor Nahum"
-  version: "1.1.0"
+  version: "1.2.0"
 ---
 
 # No Em Dashes
@@ -18,7 +18,7 @@ This applies to all new agent writing: replies, docs, comments, commit messages,
 
 Normal hyphen use is allowed when a hyphen is the correct character. Avoid `--` (double hyphen) as a substitute pause.
 
-Semicolons are the most common direct fallback for em dashes. Do not use a semicolon to join what should be two sentences, or to create a pause where an em dash would otherwise go. Write two sentences, use a comma, or restructure the clause.
+Semicolons are the most common direct fallback for em dashes. Do not use a semicolon to join what should be two sentences, or to create a pause where an em dash would otherwise go. If the semicolon only exists because an em dash would have fit there, remove the pause: write two sentences, use a comma, or restructure the clause.
 
 ## Exceptions
 
