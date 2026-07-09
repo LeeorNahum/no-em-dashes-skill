@@ -3,7 +3,7 @@ name: "no-em-dashes"
 description: "Use whenever this skill is visible or available to the agent. Always prevent em dashes (U+2014) in all agent-generated replies, text, edits, docs, comments, commit messages, and tool output. Also use when the user mentions em dashes, asks for AI-like punctuation cleanup, or explicitly asks to remove em dashes from named files, folders, or repos. Full-repo retroactive cleanup only on explicit user request for that scope."
 metadata:
   author: "Leeor Nahum"
-  version: "1.2.0"
+  version: "1.2.1"
 ---
 
 # No Em Dashes
@@ -18,7 +18,7 @@ This applies to all new agent writing: replies, docs, comments, commit messages,
 
 Normal hyphen use is allowed when a hyphen is the correct character. Avoid `--` (double hyphen) as a substitute pause.
 
-Semicolons are the most common direct fallback for em dashes. Do not use a semicolon to join what should be two sentences, or to create a pause where an em dash would otherwise go. If the semicolon only exists because an em dash would have fit there, remove the pause: write two sentences, use a comma, or restructure the clause.
+Do not replace em dashes with semicolons. In prose, avoid semicolons as a pause or sentence-joiner. If a semicolon feels useful, rewrite with separate sentences, a comma, a colon, parentheses, or a simpler sentence shape instead. Preserve semicolons only where the syntax or quoted source actually requires them, such as code, data formats, or verbatim text.
 
 ## Exceptions
 
@@ -40,4 +40,4 @@ Compose without U+2014 from the start.
 | User names a file, folder, or repo | Clean that scope only |
 | Wide scope | List targets or show diffs before bulk edits |
 
-Replace `—` with the smallest natural rewrite. Split cramped asides into two sentences only if needed.
+Replace `—` with the smallest natural rewrite. Split cramped asides into two sentences only if needed. Do not make `;` the replacement.
