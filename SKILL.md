@@ -3,7 +3,7 @@ name: "no-em-dashes"
 description: "Use whenever this skill is visible or available to the agent. Always prevent em dashes (U+2014) in all agent-generated replies, text, edits, docs, comments, commit messages, and tool output. Also use when the user mentions em dashes, asks for AI-like punctuation cleanup, or explicitly asks to remove em dashes from named files, folders, or repos. Full-repo retroactive cleanup only on explicit user request for that scope."
 metadata:
   author: "Leeor Nahum"
-  version: "1.2.1"
+  version: "1.2.2"
 ---
 
 # No Em Dashes
@@ -36,7 +36,7 @@ Compose without U+2014 from the start.
 
 | Situation | Behavior |
 | ----------- | ---------- |
-| Skill loaded; normal work | Apply to new and touched text only |
+| Skill loaded, normal work | Apply to new and touched text only |
 | User names a file, folder, or repo | Clean that scope only |
 | Wide scope | List targets or show diffs before bulk edits |
 
