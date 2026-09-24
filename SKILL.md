@@ -1,9 +1,9 @@
 ---
 name: "no-em-dashes"
-description: "Use whenever this skill is visible or available to the agent. Always prevent em dashes (U+2014) in all agent-generated output, including chat replies written directly to the user, file edits, docs, comments, commit messages, and tool output, and avoid semicolons as prose pauses or sentence joiners. Also use when the user mentions em dashes, asks for AI-like punctuation cleanup, or explicitly asks to remove em dashes from named files, folders, or repos. Full-repo retroactive cleanup only on explicit user request for that scope."
+description: "Use whenever this skill is visible or available to the agent. Always prevent em dashes (U+2014) in all agent-generated output, including chat replies written directly to the user, file edits, docs, comments, commit messages, and tool output, and avoid semicolons as prose pauses or sentence joiners. Also use when the user mentions em dashes, asks for AI-like punctuation cleanup, or explicitly asks to remove em dashes from named files, folders, or repos."
 metadata:
   author: "Leeor Nahum"
-  version: "1.4.0"
+  version: "1.4.1"
 ---
 
 # No Em Dashes
@@ -16,7 +16,7 @@ If this skill is in context, do not generate em dashes. Em dashes disrupt the pr
 
 This applies to all new agent writing: chat replies to the user, docs, comments, commit messages, generated configs, and any other produced text.
 
-**The surface most often missed is the reply to the user.** Files get checked, because a file can be grepped, diffed and reviewed, so a skill like this one reads as repository hygiene and gets applied there. Chat output gets none of that scrutiny, and it is the one surface the user actually reads. A session that leaves every file clean while writing em dashes into every message has failed this skill completely, not partially. Check your own prose as you write it, not just the files you touch.
+Check chat replies as closely as files.
 
 Normal hyphen use is allowed when a hyphen is the correct character. Avoid `--` (double hyphen) as a substitute pause.
 
@@ -30,10 +30,6 @@ Preserve U+2014 only when:
 - The source material is literary, historical, or user-authored and must stay intact
 - The user explicitly requests em dashes
 
-## While writing
-
-Compose without U+2014 from the start.
-
 ## Retroactive cleanup
 
 | Situation | Behavior |
@@ -42,4 +38,4 @@ Compose without U+2014 from the start.
 | User names a file, folder, or repo | Clean that scope only |
 | Wide scope | List targets or show diffs before bulk edits |
 
-Replace `—` with the smallest natural rewrite. Split cramped asides into two sentences only if needed. Do not make `;` the replacement.
+Replace U+2014 with the smallest natural rewrite. Split cramped asides into two sentences only if needed.
